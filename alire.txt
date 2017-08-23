@@ -1,0 +1,48 @@
+1) Créez une db mysql nommée mvc_4
+2) Créez une table 'tableau'
+    id -> int() unsigned PK AI
+    titre -> varchar(150) NN UNIQUE
+    image -> varchar(250) NULL
+    creation -> date NN
+3) Créez une table 'artiste'
+    idArtiste -> smallint() unsigned PK AI
+    leNom -> varchar(100) NN
+    lePrenom -> varchar(100) NN
+    naissance -> date NN
+4) Insérez 3 artistes
+    (NULL,"Picasso","Pablo","1881-10-25")
+    (NULL,"van Rijn","Rembrandt","1606-07-15")
+    (NULL,"Monet","Claude","1840-11-14")
+5) Créez une relation de type one to many entre 'artiste' et 'tableau' -> 'tableau'.artiste_idArtiste, utilisez la clef étrangère -> NN smallint ...
+6) Insérez une oeuvre de Picasso et 2 oeuvres de Monet
+7) Crééz une structure MVC avec contrôleur frontal, PDO comme driver sql, les classes de mapping des 2 tables (avec hydratation)
+    - index.php
+    - config.php (pour connexion à mvc_4)
+    - m/
+        - m/myPDO.class.php (étendue de PDO)
+        - m/Artiste.class.php
+        - m/ArtisteManager.class.php
+        - m/TableauManager.class.php
+        - m/Tableau.class.php
+    - v/
+        - v/tableauSeul.php
+        - v/tableauTous.php
+        - v/artisteSeul.php
+    - c/
+        - c/TableauController.php
+        - c/ArtisteController.php
+
+8) import de config.php dans index.php, appel de m/myPDO.class.php, connexion à la db dans $connect. Appel du contrôleur c/TableauController.php
+9) On ajoute à la classe de mapping 'Tableau' 2 attributs privés, venant de la table 'Artiste' lenom et leprenom
+10) On ajoute à la classe de mapping 'Tableau' les setters et getters
+11) Créez un manager pour Tableau, avec une connexion passée dans le constructeur
+12) Créez-y une méthode pour afficher tous les tableaux avec lenom et leprenom de 'artiste', une autre pour afficher le détail
+13) dans c/TableauController.php, si il n' a pas de variable get 'idtab', chargez tous les tableaux, sinon vérifiez la valeur de idtab et sélectionnez le tableau complet. Appelez la vue correspondante
+14) créez un contrôleur, une classe Artiste, une classe ArtisteManager et une vue artisteSeul pour les artistes
+15) rajoutez les liens permettant de cliquer sur un artiste
+16) on affiche les données de l'artiste et les liens vers ses tableaux
+17) on ajoute un formulaire sur toutes les pages pour pouvoir se connecter
+18) dans config.php, on rajoute l'utilisateur "admin" et son mot de passe "1234" dans des constantes.
+19) Il faut un bouton déconnexion lorsqu'on est connecté
+19) dès qu'on est connecté, on peut ajouter, modifier et supprimer un tableau (! choix de l'Artiste)
+
