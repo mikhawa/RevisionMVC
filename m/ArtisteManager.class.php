@@ -27,7 +27,7 @@ GROUP_CONCAT(t.image SEPARATOR '|@@|') AS image
         $req = $this->db->prepare($sql);
         $req->bindValue(1, $ida, PDO::PARAM_INT);
         $req->execute();
-        return $req->fetchAll(PDO::FETCH_ASSOC);
+        return $req->fetch(PDO::FETCH_ASSOC);
     }
 
 }
