@@ -6,6 +6,7 @@
     </head>
     <body>
         <h1>Le tableau</h1>
+        <div><?php require_once 'v/formAccueil.php'; ?></div>
         <?php
 
             ?>

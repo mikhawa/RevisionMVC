@@ -12,6 +12,7 @@
             //var_dump($art);
             ?>
         <h1>L'artiste <?=$art->getLeprenom()?> <?=$art->getLenom()?></h1>
+        <div><?php require_once 'v/formAccueil.php'; ?></div>
         <h2>Né en <?=$art->getNaissance()?></h2>
         <?php
             //var_dump($art->getTitre());
