@@ -43,7 +43,7 @@ class Artiste {
     }
 
     public function getNaissance() {
-        return $this->naissance;
+        return date("Y", strtotime($this->naissance));
     }
 
     public function setIdArtiste($idArtiste) {
@@ -62,15 +62,18 @@ class Artiste {
         $this->naissance = $naissance;
     }
     public function getId() {
-        return $this->id;
+        $sortie = explode(",", $this->id);
+        return $sortie;
     }
 
     public function getTitre() {
-        return $this->titre;
+        $sortie = explode("@||@",$this->titre);
+        return $sortie;
     }
 
     public function getImage() {
-        return $this->image;
+        $sortie = explode("|@@|",$this->image);
+        return $sortie;
     }
 
     public function setId($id) {

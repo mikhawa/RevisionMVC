@@ -14,8 +14,6 @@
         <h3>Par <a href="?idartiste=<?=$obj->getArtiste_idArtiste()?>"><?=$obj->getLenom()?> <?=$obj->getLeprenom()?></a></h3>
         <p>En <?=date("Y",strtotime($obj->getCreation()))?></p>
         <h4><a href="./">Retour à l'accueil</a></h4>
-        <?php
         
-        ?>
     </body>
 </html>
