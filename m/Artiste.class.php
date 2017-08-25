@@ -11,7 +11,7 @@ class Artiste {
     private $lenom;
     private $leprenom;
     private $naissance;
-    // Attributs complémentaires de tableau
+    // Attributs complémentaires de tableau! on souhaite des tableaux car on ne connait pas à l'avance le nombre de tableaux par artiste
     private $id;
     private $titre;
     private $image;

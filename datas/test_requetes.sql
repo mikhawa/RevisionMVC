@@ -30,3 +30,11 @@ SELECT t.*, a.lenom, a.leprenom FROM tableau t
 	INNER JOIN artiste a 
     ON a.idArtiste = t.artiste_idArtiste
     ORDER BY t.creation ASC;
+    
+SELECT a.*, GROUP_CONCAT(t.id) AS id, GROUP_CONCAT(t.titre SEPARATOR "@||@") AS titre, 
+GROUP_CONCAT(t.image SEPARATOR "|@@|") AS image  
+                    FROM artiste a
+                        LEFT JOIN tableau t
+                        ON a.idArtiste = t.artiste_idArtiste
+                    WHERE a.idArtiste = 6
+                    GROUP BY a.idArtiste;

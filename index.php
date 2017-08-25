@@ -15,4 +15,9 @@ $connect = new myPDO("mysql:host=".DB_HOST.";dbname=".DB_NAME.";charset=".DB_CHA
 
 // routage de base
 
-require_once 'c/tableauController.php';
+// on veut afficher un artiste grâce à son id
+if(isset($_GET['idartiste'])&& ctype_digit($_GET['idartiste'])){
+    require_once 'c/artisteController.php';
+}else{
+    require_once 'c/tableauController.php';
+}
