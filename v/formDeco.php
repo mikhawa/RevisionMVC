@@ -1,0 +1,1 @@
+<h2 align='right'><a href="?deco">Déconnexion</a></h2>

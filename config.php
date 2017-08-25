@@ -11,3 +11,9 @@ define("DB_PWD", "");
 define("DB_CHARSET", "utf8");
 define("DB_PORT", 3306);
 
+/*
+ * Paramètres de connexion admin
+ */
+
+define("USER", "admin");
+define("PWD", "1234");
