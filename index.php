@@ -17,7 +17,6 @@ require_once 'vendor/autoload.php';
 $connect = new myPDO("mysql:host=".DB_HOST.";dbname=".DB_NAME.";charset=".DB_CHARSET.";port=".DB_PORT, DB_LOGIN, DB_PWD);
 
 
-
 // routage de base
 
 // on veut se connecter
